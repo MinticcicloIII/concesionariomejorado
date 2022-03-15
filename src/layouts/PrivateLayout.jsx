@@ -46,7 +46,7 @@ const PrivateLayout = ({ children }) => {
     if (isAuthenticated) {
       fetchAuth0Token();
     }
-  }, [isAuthenticated, getAccessTokenSilently, logout, setUserData]);
+  }, [isAuthenticated, getAccessTokenSilently]);
 
   if (isLoading || loadingUserInformation)
     return <ReactLoading type='cylon' color='#abc123' height={667} width={375} />;

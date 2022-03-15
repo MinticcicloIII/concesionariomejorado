@@ -14,7 +14,6 @@ import Ventas from 'pages/admin/Ventas';
 import { Auth0Provider } from '@auth0/auth0-react';
 import Usuarios from 'pages/admin/Usuarios';
 import { UserContext } from 'context/userContext';
-import PrivateRoute from 'components/PrivateRoute';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -27,7 +26,7 @@ function App() {
     <Auth0Provider
       domain='misiontic-concesionario.us.auth0.com'
       clientId='WsdhjjQzDLIZEHA6ouuxXGxFONFGAQ4g'
-      redirectUri='https://intense-brook-01822.herokuapp.com/admin'
+      redirectUri='http://localhost:3000/admin'
       audience='api-autenticacion-concesionario-mintic'
     >
       <div className='App'>
@@ -39,19 +38,13 @@ function App() {
                   <PrivateLayout>
                     <Switch>
                       <Route path='/admin/vehiculos'>
-                        <PrivateRoute roleList={['admin']}>
-                          <Vehiculos />
-                        </PrivateRoute>
+                        <Vehiculos />
                       </Route>
                       <Route path='/admin/ventas'>
-                        <PrivateRoute roleList={['admin', 'vendedor']}>
-                          <Ventas />
-                        </PrivateRoute>
+                        <Ventas />
                       </Route>
                       <Route path='/admin/usuarios'>
-                        <PrivateRoute roleList={['admin']}>
-                          <Usuarios />
-                        </PrivateRoute>
+                        <Usuarios />
                       </Route>
                       <Route path='/admin'>
                         <Admin />
