@@ -25,7 +25,7 @@ function App() {
   return (
     <Auth0Provider
       domain='misiontic-concesionario-stefano.us.auth0.com'
-      clientId='misiontic-concesionario-stefano.us.auth0.com'
+      clientId='DFVrWnRpt76smT4Ez7spKd34WktUuPj6'
       redirectUri='http://localhost:3000/admin'
       audience='api-autenticacion-concesionario-mintic-stefano'
     >
