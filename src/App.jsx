@@ -26,7 +26,7 @@ function App() {
     <Auth0Provider
       domain='misiontic-concesionario-stefano.us.auth0.com'
       clientId='DFVrWnRpt76smT4Ez7spKd34WktUuPj6'
-      redirectUri='http://localhost:3000/admin'
+      redirectUri='https://pure-falls-25984.herokuapp.com/'
       audience='api-autenticacion-concesionario-mintic-stefano'
     >
       <div className='App'>
